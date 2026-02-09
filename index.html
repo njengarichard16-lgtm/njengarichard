@@ -3,46 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Valentine's Day</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
     <style>
-        body {
-            background-color: pink;
-            overflow: hidden;
-            text-align: center;
-            font-family: Arial, sans-serif;
+        /* Updated styles */
+        .big-question {
+            font-family: 'YourChosenFontFamily', sans-serif; /* Update with the desired font family */
         }
+
         h1 {
-            margin-top: 50px;
-            color: red;
-            font-size: 50px;
+            font-family: 'YourChosenFontFamily', sans-serif; /* Update with the desired font family */
         }
-        .rose {
-            position: absolute;
-            bottom: -50px;
-            width: 50px;
-            animation: float 6s infinite alternate;
+
+        /* Capping floating elements */
+        .floating-element {
+            max-height: 40px;
+            overflow: hidden;
         }
-        @keyframes float {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-100px); }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            /* Your reduced motion styles here */
+        }
+
+        /* Easter egg trigger with container h1 selector */
+        .container h1:hover {
+            /* Easter egg actions */
         }
     </style>
 </head>
 <body>
-    <h1>Happy Valentine's Day!</h1>
-    <img src="https://example.com/red-rose.png" alt="Red Rose" class="rose">
-    <script>
-        function createRoses() {
-            const roseCount = 10; // Number of roses
-            for (let i = 0; i < roseCount; i++) {
-                let rose = document.createElement("img");
-                rose.src = "https://example.com/red-rose.png"; // Replace with your rose image URL
-                rose.className = "rose";
-                rose.style.left = Math.random() * 100 + "vw";
-                document.body.appendChild(rose);
-            }
-        }
-        createRoses();
-    </script>
+    <div class="container">
+        <h1>Title</h1>
+        <p class="big-question">Big Question Here</p>
+        <iframe
+            src="https://www.youtube.com/embed/videoseries?list=YOUR_PLAYLIST_ID&loop=1"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+        </iframe>
+    </div>
 </body>
 </html>
