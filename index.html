@@ -1,41 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Music Player</title>
-    <script>
-        var tag = document.createElement('script');
-        tag.src = "https://www.youtube.com/iframe_api";
-        var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-        var player;
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('player', {
-                height: '390',
-                width: '640',
-                videoId: 'YOUR_VIDEO_ID', // replace with your video ID
-                playerVars: {
-                    'playsinline': 1, // Autoplay after interaction
-                    'start': 720, // Start at 12 minutes
-                    'autoplay': 0 // Autoplay enabled after user interaction
-                },
-                events: {
-                    'onReady': onPlayerReady
-                }
-            });
-        }
-
-        function onPlayerReady(event) {
-            document.getElementById('play-button').addEventListener('click', function() {
-                player.playVideo();
-            });
-        }
-    </script>
+    <title>YouTube Player Example</title>
 </head>
 <body>
-    <div id="player"></div>
-    <button id="play-button">Play Music</button>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/your_video_id?start=750" frameborder="0" allowfullscreen></iframe>
 </body>
 </html>
